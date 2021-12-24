@@ -1,0 +1,15 @@
+export { default as Header } from "./header/Header";
+export { default as Hero } from "./hero/Hero";
+export { default as Promo } from "./promo/Promo";
+export { default as About } from "./about/About";
+export { default as Cta } from "./cta/Cta";
+export { default as Pricing } from "./pricing/Pricing";
+export { default as Featured } from "./featured/Featured";
+export { default as Trainers } from "./trainers/Trainers";
+export { default as Classes } from "./classes/Classes";
+export { default as Tesimonial } from "./testimonial/Testimonial";
+export { default as Blog } from "./blog/Blog";
+export { default as Clients } from "./clients/Clients";
+export { default as DownloadApp } from "./app/DownloadApp";
+export { default as Faqs } from "./faqs/Faqs";
+export { default as Footer } from "./footer/Footer";
