@@ -1,12 +1,44 @@
 import React from "react";
 
+//Owl Carousel Libraries and Module
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+
+const options = {
+	margin: 30,
+	responsiveClass: true,
+	nav: false,
+	autoplay: false,
+	smartSpeed: 1000,
+	responsive: {
+		0: {
+			items: 1,
+		},
+		400: {
+			items: 1,
+		},
+		600: {
+			items: 1,
+		},
+		700: {
+			items: 1,
+		},
+		1000: {
+			items: 1,
+		},
+	},
+};
+
 const Testimonial = () => {
 	return (
 		<section className="testimonial-wrap v2 bg-f test-bg-3">
 			<div className="container pos-rel">
 				<div className="row">
 					<div className="col-md-12">
-						<div className="testimonial-slider-v2 owl-carousel owl-loaded owl-drag">
+						<OwlCarousel
+							className="slider-items testimonial-slider-v2 owl-carousel "
+							{...options}>
 							<div className="owl-stage-outer">
 								<div
 									className="owl-stage"
@@ -297,12 +329,12 @@ const Testimonial = () => {
 									</div>
 								</div>
 							</div>
-							<div className="owl-nav disabled">
+							{/* <div className="owl-nav disabled">
 								<button role="presentation" className="owl-prev">
-									<span aria-label="Previous">‹</span>
+									<span aria-label="Previous">Prev</span>
 								</button>
 								<button role="presentation" className="owl-next">
-									<span aria-label="Next">›</span>
+									<span aria-label="Next">Next</span>
 								</button>
 							</div>
 							<div className="owl-dots">
@@ -315,8 +347,8 @@ const Testimonial = () => {
 								<button className="owl-dot">
 									<span></span>
 								</button>
-							</div>
-						</div>
+							</div> */}
+						</OwlCarousel>
 					</div>
 				</div>
 			</div>

@@ -3,7 +3,7 @@ import "./header.css";
 
 const Header = () => {
 	return (
-		<header className="header-wrap v1">
+		<header className="header-wrap v1" style={{ zIndex: "5999" }}>
 			<div className="container">
 				<div className="row align-items-center">
 					<div className="col-lg-1 col-md-4  col-5 mpx-0">

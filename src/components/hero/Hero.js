@@ -1,9 +1,41 @@
 import React from "react";
 
+//Owl Carousel Libraries and Module
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import "./hero.css";
+
+const options = {
+	margin: 30,
+	responsiveClass: true,
+	nav: true,
+	autoplay: false,
+	smartSpeed: 1000,
+	responsive: {
+		0: {
+			items: 1,
+		},
+		400: {
+			items: 1,
+		},
+		600: {
+			items: 1,
+		},
+		700: {
+			items: 1,
+		},
+		1000: {
+			items: 1,
+		},
+	},
+};
 const Hero = () => {
 	return (
 		<div className="hero-wrap v1">
-			<div className="hero-slider-v1 ">
+			<OwlCarousel
+				className="slider-items hero-slider-v1 owl-carousel"
+				{...options}>
 				<div className="item">
 					<div className="hero-slider-item bg-f hero-bg-7">
 						<div className="container">
@@ -79,7 +111,7 @@ const Hero = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</OwlCarousel>
 		</div>
 	);
 };

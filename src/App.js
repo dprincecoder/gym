@@ -10,7 +10,7 @@ import {
 	Hero,
 	Pricing,
 	Promo,
-	Tesimonial,
+	Testimonial,
 	Trainers,
 	Clients,
 	DownloadApp,
@@ -29,7 +29,7 @@ const App = () => {
 			<Featured />
 			<Trainers />
 			<Classes />
-			<Tesimonial />
+			<Testimonial />
 			<Blog />
 			<Clients />
 			<DownloadApp />
