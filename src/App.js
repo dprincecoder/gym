@@ -1,22 +1,21 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import { Header, Footer } from "./components/layouts";
 import {
-	About,
-	Blog,
-	Classes,
-	Cta,
-	Featured,
-	Header,
 	Hero,
-	Pricing,
 	Promo,
-	Testimonial,
+	Cta,
+	Pricing,
+	Featured,
 	Trainers,
+	Classes,
+	Testimonial,
+	Blog,
 	Clients,
 	DownloadApp,
 	Faqs,
-	Footer,
-} from "./components";
+} from "./components/home";
+import { About, Contact } from "./components";
 const App = () => {
 	return (
 		<div className="page-wrapper">
@@ -34,6 +33,7 @@ const App = () => {
 			<Clients />
 			<DownloadApp />
 			<Faqs />
+			<Contact />
 			<Footer />
 			<a href="#" className="back-to-top bounce">
 				<i className="las la-arrow-up"></i>
