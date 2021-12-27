@@ -1,6 +1,10 @@
 import React from "react";
 
 const Contact = () => {
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		console.log("submit");
+	};
 	return (
 		<>
 			<section class="breadcrumb-wrap bg-f br-bg-1">
@@ -23,9 +27,8 @@ const Contact = () => {
 									<h5>Contact Us</h5>
 								</div>
 								<form
-									action="#"
 									class="review-form"
-									method="post"
+									onSubmit={handleSubmit}
 									id="contact_form">
 									<div
 										id="message"
