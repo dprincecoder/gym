@@ -30,7 +30,7 @@ const Promo = () => {
 									<i className="flaticon-fitness"></i>
 								</div>
 								<div className="promo-text">
-									<h5>Fitness classNamees</h5>
+									<h5>Fitness classes</h5>
 									<p>
 										Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
 										diam nonumy eirmod.

@@ -38,9 +38,9 @@ const Header = () => {
 												<i className="flaticon-phone-call"></i>213-200-8224
 											</a>
 										</div>
-										<div className="lang_selctor">
+										<div className="lang-sel">
 											<i className="las la-globe"></i>
-											<select>
+											<select className="select">
 												<option value="1">English</option>
 												<option value="2">French</option>
 												<option value="3">Arabic</option>
@@ -65,6 +65,9 @@ const Header = () => {
 													Home
 												</a>
 											</li>
+											<li className="has-child">
+												<a href="/login">Login</a>
+											</li>
 										</ul>
 									</nav>
 									<div className="mobile-menu">
@@ -78,7 +81,6 @@ const Header = () => {
 										<div className="mobile-top-bar xl-none">
 											<i className="las la-sliders-h"></i>
 										</div>
-
 										<div className="header-btn md-none">
 											<a href="className.html" className="btn v1">
 												Contact Us

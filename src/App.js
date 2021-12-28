@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Header, Footer } from "./components/layouts";
-import {
+import HomePage, {
 	Hero,
 	Promo,
 	Cta,
@@ -16,11 +16,13 @@ import {
 	Faqs,
 } from "./components/home";
 import { About, Contact } from "./components";
+import { Login } from "./code";
 const App = () => {
 	return (
 		<div className="page-wrapper">
-			<Header />
+			{/* <Header />
 			<Hero />
+			<Login />
 			<Promo />
 			<About />
 			<Cta />
@@ -37,7 +39,17 @@ const App = () => {
 			<Footer />
 			<a href="#" className="back-to-top bounce">
 				<i className="las la-arrow-up"></i>
-			</a>
+			</a> */}
+
+			<Switch>
+				<Route exact path="/">
+					<HomePage />
+				</Route>
+				<Route exact path="/login">
+					{" "}
+					<Login />
+				</Route>
+			</Switch>
 		</div>
 	);
 };
