@@ -16,31 +16,10 @@ import HomePage, {
 	Faqs,
 } from "./components/home";
 import { About, Contact } from "./components";
-import { Login } from "./code";
+import { Dashboard, Login } from "./code";
 const App = () => {
 	return (
 		<div className="page-wrapper">
-			{/* <Header />
-			<Hero />
-			<Login />
-			<Promo />
-			<About />
-			<Cta />
-			<Pricing />
-			<Featured />
-			<Trainers />
-			<Classes />
-			<Testimonial />
-			<Blog />
-			<Clients />
-			<DownloadApp />
-			<Faqs />
-			<Contact />
-			<Footer />
-			<a href="#" className="back-to-top bounce">
-				<i className="las la-arrow-up"></i>
-			</a> */}
-
 			<Switch>
 				<Route exact path="/">
 					<HomePage />
@@ -48,6 +27,9 @@ const App = () => {
 				<Route exact path="/login">
 					{" "}
 					<Login />
+				</Route>
+				<Route exact path="/dashboard">
+					<Dashboard />
 				</Route>
 			</Switch>
 		</div>
