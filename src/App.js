@@ -1,22 +1,13 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { Header, Footer } from "./components/layouts";
-import HomePage, {
-	Hero,
-	Promo,
-	Cta,
-	Pricing,
-	Featured,
-	Trainers,
-	Classes,
-	Testimonial,
-	Blog,
-	Clients,
-	DownloadApp,
-	Faqs,
-} from "./components/home";
-import { About, Contact } from "./components";
-import { Dashboard, Login } from "./code";
+import HomePage from "./components/home";
+import {
+	Dashboard,
+	Login,
+	EditAccount,
+	GymDashboard,
+	EditAccountTrainer,
+} from "./code";
 const App = () => {
 	return (
 		<div className="page-wrapper">
@@ -28,8 +19,17 @@ const App = () => {
 					{" "}
 					<Login />
 				</Route>
-				<Route exact path="/dashboard">
+				<Route exact path="/admin">
 					<Dashboard />
+				</Route>
+				<Route exact path="/customer">
+					<EditAccount />
+				</Route>
+				<Route exact path="/gym">
+					<GymDashboard />
+				</Route>
+				<Route exact path="/trainer">
+					<EditAccountTrainer />
 				</Route>
 			</Switch>
 		</div>
