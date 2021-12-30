@@ -15,9 +15,7 @@ import App from "./App";
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<AuthWrapper currentUser={trainerUser}>
-				<App />
-			</AuthWrapper>
+			<App />
 		</BrowserRouter>
 	</React.StrictMode>,
 	document.getElementById("root")

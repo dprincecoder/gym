@@ -1,35 +1,27 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import HomePage from "./components/home";
-import {
-	Dashboard,
-	Login,
-	EditAccount,
-	GymDashboard,
-	EditAccountTrainer,
-} from "./code";
+import { FooterConsole, HeaderConsole } from "./components/console/layout";
+import HomePage from "./components/home/homePage";
+import { Footer, Header } from "./components/home/layouts";
+import Dashboard from "./components/console/admin/Dashboard";
+import EditAccountTrainer from "./components/console/trainer/EditAccountTrainer";
+import EnrollClass from "./components/console/customer/EnrollClass";
+import GymDashboard from "./components/console/gym/GymDashboard";
 const App = () => {
 	return (
 		<div className="page-wrapper">
 			<Switch>
-				<Route exact path="/">
-					<HomePage />
+				<Route path="/" element={<Header />}>
+					<Route index element={<HomePage />} />
+					<Route path="/" element={<Footer />} />
+					<Route path="*" element={<HomePage />} />
 				</Route>
-				<Route exact path="/login">
-					{" "}
-					<Login />
-				</Route>
-				<Route exact path="/admin">
-					<Dashboard />
-				</Route>
-				<Route exact path="/customer">
-					<EditAccount />
-				</Route>
-				<Route exact path="/gym">
-					<GymDashboard />
-				</Route>
-				<Route exact path="/trainer">
-					<EditAccountTrainer />
+				<Route path="/console/" element={<HeaderConsole />}>
+					<Route path="admin" element={<Dashboard />} />
+					<Route path="trainer" element={<EditAccountTrainer />} />
+					<Route path="customer" element={<EnrollClass />} />
+					<Route path="gym" element={<GymDashboard />} />
+					<Route path="/console/" element={<FooterConsole />} />
 				</Route>
 			</Switch>
 		</div>
