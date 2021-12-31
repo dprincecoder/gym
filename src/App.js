@@ -14,19 +14,17 @@ const App = () => {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Header />}>
-					 	<Route index element={<HomePage />} />
+						<Route index element={<HomePage />} />
 						<Route path="/" element={<Footer />} />
-						<Route path="*" element={<HomePage />} /> 
+						<Route path="*" element={<HomePage />} />
 					</Route>
-				</Routes>
-				<Routes>
 					<Route path="/console/" element={<HeaderConsole />}>
 						<Route path="admin" element={<Dashboard />} />
 						<Route path="trainer" element={<EditAccountTrainer />} />
 						<Route path="customer" element={<EnrollClass />} />
 						<Route path="gym" element={<GymDashboard />} />
+						<Route path="/console/" element={<FooterConsole />} />
 					</Route>
-					<Route path="/console/" element={<Footer />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
