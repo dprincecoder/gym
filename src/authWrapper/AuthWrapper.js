@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { checkUserType } from "../hoc";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AuthWrapper = ({ currentUser, children }) => {
-	const history = useHistory();
+	const navigate = useNavigate();
 	const userType = checkUserType(currentUser);
 	useEffect(() => {
 		if (!currentUser) {
-			history.push("/");
+			navigate("/");
 		} else {
-			history.push(`/${userType}`);
+			navigate(`/${userType}`);
 		}
-	}, [currentUser, history, userType]);
+	}, [currentUser, navigate, userType]);
 
 	return <div className="page-wrapper">{children}</div>;
 };

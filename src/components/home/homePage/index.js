@@ -12,7 +12,6 @@
 // export { default as Faqs } from "./faqs/Faqs";
 
 import React from "react";
-import { Header, Footer } from "../layouts";
 import Hero from "./hero/Hero";
 import Promo from "./promo/Promo";
 import About from "../about/About";
