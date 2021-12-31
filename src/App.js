@@ -7,7 +7,7 @@ import Dashboard from "./components/console/admin/Dashboard";
 import EditAccountTrainer from "./components/console/trainer/EditAccountTrainer";
 import EnrollClass from "./components/console/customer/EnrollClass";
 import GymDashboard from "./components/console/gym/GymDashboard";
-import Layout from "./components/Layout";
+
 const App = () => {
 	return (
 		<div className="page-wrapper">
